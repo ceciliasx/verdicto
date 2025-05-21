@@ -25,6 +25,19 @@ class ProfileUpdateRequest extends FormRequest
                 'max:255',
                 Rule::unique(User::class)->ignore($this->user()->id),
             ],
+            'phone' => [
+                'required',
+                'regex:/^08[0-9]{8,13}$/',
+            ],
+            'gender' => [
+                'required',
+                Rule::in(['male', 'female', 'others']),
+            ],
+            'role' => [
+                'required',
+                Rule::in(['client', 'lawyer']),
+            ],
+            'city' => ['required', 'string', 'max:255'],
         ];
     }
 }

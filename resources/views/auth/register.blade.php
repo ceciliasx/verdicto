@@ -16,6 +16,13 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
+        <!-- Phone Number -->
+        {{-- <div class="mt-4">
+            <x-input-label for="phone" :value="__('Phone Number')" />
+            <x-text-input id="phone" class="block mt-1 w-full" type="tel" name="phone" :value="old('phone')" required autocomplete="tel" />
+            <x-input-error :messages="$errors->get('phone')" class="mt-2" />
+        </div> --}}
+
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Password')" />
@@ -39,8 +46,40 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
+        {{-- <!-- Gender -->
+        <div class="mt-4">
+            <x-input-label for="gender" :value="__('Gender')" />
+            <div class="flex gap-4 mt-1">
+                <label class="inline-flex items-center text-customWhite">
+                    <input type="radio" name="gender" value="male" class="text-customYellow focus:ring-indigo-500" {{ old('gender', $user->gender) == 'male' ? 'checked' : '' }} required>
+                    <span class="ml-2">Male</span>
+                </label>
+                <label class="inline-flex items-center text-customWhite">
+                    <input type="radio" name="gender" value="female" class="text-customYellow focus:ring-indigo-500" {{ old('gender', $user->gender) == 'female' ? 'checked' : '' }} required>
+                    <span class="ml-2">Female</span>
+                </label>
+                <label class="inline-flex items-center text-customWhite">
+                    <input type="radio" name="gender" value="other" class="text-customYellow focus:ring-indigo-500" {{ old('gender', $user->gender) == 'other' ? 'checked' : '' }} required>
+                    <span class="ml-2">Other</span>
+                </label>
+            </div>
+            <x-input-error :messages="$errors->get('gender')" class="mt-2" />
+        </div>
+
+        <!-- Terms Checkbox -->
+        <div class="mt-4">
+            <label class="inline-flex items-start">
+                <input type="checkbox" name="terms" class="rounded mt-1 text-customYellow focus:ring-indigo-500" {{ old('terms') ? 'checked' : '' }} required>
+                <span class="ml-2 text-sm text-customWhite">
+                    {{ __('I understand and accept the') }} 
+                    <a href="#" class="underline hover:text-customYellow">{{ __('terms and conditions') }}</a>.
+                </span>
+            </label>
+            <x-input-error :messages="$errors->get('terms')" class="mt-2" />
+        </div> --}}
+
         <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+            <a class="underline text-sm text-customWhite hover:text-customYellow rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
 
