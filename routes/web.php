@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\LawyerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +20,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/lawyer', [LawyerController::class, 'index'])->name('lawyer.index');
 
 require __DIR__.'/auth.php';

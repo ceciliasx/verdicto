@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                        <x-application-logo class="block h-9 w-auto fill-current" />
                     </a>
                 </div>
 
@@ -17,7 +17,7 @@
             <div id="links" class="hidden sm:flex items-center">
                 <ul class="direct flex space-x-6">
                     <li><a href="{{route('dashboard')}}" class="text-lg text-customFont hover:font-bold hover:text-customYellow">Home</a></li>
-                    <li><a href="{{route('dashboard')}}" class="text-lg text-customFont hover:font-bold hover:text-customYellow">Lawyer</a></li>
+                    <li><a href="{{route('lawyer.index')}}" class="text-lg text-customFont hover:font-bold hover:text-customYellow">Lawyer</a></li>
                     <li><a href="{{route('article.index')}}" class="text-lg text-customFont hover:font-bold hover:text-customYellow">Article</a></li>
                 </ul>
             </div>
