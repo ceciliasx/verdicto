@@ -3,9 +3,7 @@
         @vite('resources/css/lawyer_style.css')
     @endsection
 
-    <div class="search-container">
-        <input type="text" id="search" placeholder="Cari pengacara di sini..." />
-    </div>
+    <x-search-box id="search" placeholder="Cari pengacara di sini..." />
 
     <div class="lawyer-grid" id="lawyerGrid"></div>
 

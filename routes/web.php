@@ -22,4 +22,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/lawyer', [LawyerController::class, 'index'])->name('lawyer.index');
 
+Route::get('/aboutus', function () {
+    return view('aboutus.aboutus');
+});
+
 require __DIR__.'/auth.php';

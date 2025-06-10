@@ -96,169 +96,184 @@
     schedules: ["10:00", "13:00", "15:00"]
   },
 ];
+window.lawyers = lawyers;
 
-const lawyerGrid = document.getElementById("lawyerGrid");
-const searchInput = document.getElementById("search");
-const modal = document.getElementById("lawyerModal");
-const modalContent = document.getElementById("modalContent");
-const closeModalBtn = document.getElementById("closeModal");
+document.addEventListener("DOMContentLoaded", function (){
+  const lawyerGrid = document.getElementById("lawyerGrid");
+  const searchInput = document.getElementById("search");
+  const modal = document.getElementById("lawyerModal");
+  const modalContent = document.getElementById("modalContent");
+  const closeModalBtn = document.getElementById("closeModal");
 
-function renderLawyers(data) {
-  lawyerGrid.innerHTML = "";
-  const left = document.createElement("div");
-  const right = document.createElement("div");
-  left.className = "column";
-  right.className = "column";
-
-  data.forEach((lawyer, index) => {
+  window.lawyers.forEach((lawyer, index) => {
     const card = document.createElement("div");
-    card.className = "lawyer-card";
+    card.className = "cursor-pointer bg-customWhite p-3 rounded-[20px] shadow-lg text-gray-800 text-center transform hover:scale-105 transition-transform duration-300";
+    card.onclick = () => openModal(lawyer);
     card.innerHTML = `
-        <div class="card-content">
-          <img src="${lawyer.image}" alt="${lawyer.name}" />
-          <div class="card-text">
+      <img src="${lawyer.image}" alt="${lawyer.name}" class="w-100 h-60 rounded-[17px] mx-auto mb-4 object-cover">
+      <h3 class="text-xl font-bold text-customBlue">${lawyer.name.split(",")[0]}</h3>
+      <p class="text-customYellow font-semibold text-lg">★ ${lawyer.rating}</p>
+    `;
+    lawyerGrid.appendChild(card);
+  });
+  
+  function renderLawyers(data) {
+    lawyerGrid.innerHTML = "";
+    const left = document.createElement("div");
+    const right = document.createElement("div");
+    left.className = "column";
+    right.className = "column";
+  
+    data.forEach((lawyer, index) => {
+      const card = document.createElement("div");
+      card.className = "lawyer-card";
+      card.innerHTML = `
+          <div class="card-content">
+            <img src="${lawyer.image}" alt="${lawyer.name}" />
+            <div class="card-text">
+              <h3><strong>${lawyer.name}</strong></h3>
+              <p class="specialty">${lawyer.type}</p>
+              <div class="stars">⭐⭐⭐⭐⭐ <span>${lawyer.rating} ratings</span></div>
+              <p class="experience">🗓️ ${lawyer.experience} years experience</p>
+              <div class="actions">
+                <button class="contact-btn">Contact Person</button>
+                <button><a href="#" download class="download-btn">Download Portofolio ⬇️</a></button>
+              </div>
+            </div>
+          </div>
+        `;
+  
+      card.querySelector('.contact-btn').addEventListener('click', (e) => {
+          e.stopPropagation();
+          console.log('Contacting:', lawyer.name, lawyer.phone);
+          alert(`Contact ${lawyer.name} at ${lawyer.phone}`);
+      });
+      card.querySelector('.download-btn').addEventListener('click', (e) => {
+          e.stopPropagation();
+          console.log('Downloading portfolio for:', lawyer.name);
+          alert(`Portfolio for ${lawyer.name} would be downloaded.`);
+      });
+  
+      card.addEventListener("click", () => openModal(lawyer));
+  
+      if (index % 2 === 0) {
+        left.appendChild(card);
+      } else {
+        right.appendChild(card);
+      }
+    });
+  
+    lawyerGrid.appendChild(left);
+    lawyerGrid.appendChild(right);
+  }
+  
+  function openModal(lawyer) {
+    const alumniHtml = lawyer.alumniList.map(item => `<span>${item}</span>`).join('<br>');
+  
+    const ratingStarsCount = Math.round(lawyer.rating);
+    const starsVisualHtml = '⭐'.repeat(ratingStarsCount);
+    const headerStarsVisualHtml = '⭐'.repeat(Math.floor(lawyer.rating));
+  
+    modalContent.innerHTML = `
+      
+      <div class="profile-detail">
+        <div class="header">
+          <img src="${lawyer.image}" alt="${lawyer.name}" class="profile-img" />
+          <div class="header-info">
             <h3><strong>${lawyer.name}</strong></h3>
             <p class="specialty">${lawyer.type}</p>
-            <div class="stars">⭐⭐⭐⭐⭐ <span>${lawyer.rating} ratings</span></div>
+            <div class="stars">${headerStarsVisualHtml} <span>${lawyer.rating} ratings</span></div>
             <p class="experience">🗓️ ${lawyer.experience} years experience</p>
-            <div class="actions">
-              <button class="contact-btn">Contact Person</button>
-              <button><a href="#" download class="download-btn">Download Portofolio ⬇️</a></button>
+            <div class="modal-actions">
+              <button class="contact-person-modal">Contact Person</button>
+              <button class="download-portfolio-modal"><a href="#" download>Download Portofolio ⬇️</a></button>
             </div>
           </div>
         </div>
-      `;
-
-    card.querySelector('.contact-btn').addEventListener('click', (e) => {
-        e.stopPropagation();
-        console.log('Contacting:', lawyer.name, lawyer.phone);
-        alert(`Contact ${lawyer.name} at ${lawyer.phone}`);
-    });
-    card.querySelector('.download-btn').addEventListener('click', (e) => {
-        e.stopPropagation();
-        console.log('Downloading portfolio for:', lawyer.name);
-        alert(`Portfolio for ${lawyer.name} would be downloaded.`);
-    });
-
-    card.addEventListener("click", () => openModal(lawyer));
-
-    if (index % 2 === 0) {
-      left.appendChild(card);
-    } else {
-      right.appendChild(card);
-    }
-  });
-
-  lawyerGrid.appendChild(left);
-  lawyerGrid.appendChild(right);
-}
-
-function openModal(lawyer) {
-  const alumniHtml = lawyer.alumniList.map(item => `<span>${item}</span>`).join('<br>');
-
-  const ratingStarsCount = Math.round(lawyer.rating);
-  const starsVisualHtml = '⭐'.repeat(ratingStarsCount);
-  const headerStarsVisualHtml = '⭐'.repeat(Math.floor(lawyer.rating));
-
-  modalContent.innerHTML = `
-    
-    <div class="profile-detail">
-      <div class="header">
-        <img src="${lawyer.image}" alt="${lawyer.name}" class="profile-img" />
-        <div class="header-info">
-          <h3><strong>${lawyer.name}</strong></h3>
-          <p class="specialty">${lawyer.type}</p>
-          <div class="stars">${headerStarsVisualHtml} <span>${lawyer.rating} ratings</span></div>
-          <p class="experience">🗓️ ${lawyer.experience} years experience</p>
-          <div class="modal-actions">
-            <button class="contact-person-modal">Contact Person</button>
-            <button class="download-portfolio-modal"><a href="#" download>Download Portofolio ⬇️</a></button>
+  
+        <div class="tab-section">
+          <button class="tab active" data-tab="background">📄 Lawyer Background</button>
+          <button class="tab" data-tab="ratings">⭐ Lawyer Ratings</button>
+        </div>
+  
+        <div id="backgroundContent" class="tab-pane active">
+          <div class="detail">
+            <p><strong>Alumni</strong><br>${alumniHtml}</p>
+            <p><strong>Wilayah</strong><br>${lawyer.location}</p>
+            <p><strong>No. NIA</strong><br>${lawyer.license}</p>
+          </div>
+        </div>
+  
+        <div id="ratingsContent" class="tab-pane">
+          <div class="detail">
+            <p><strong>Detailed Ratings & Reviews</strong></p>
+            <div class="ratings-tab-stars">${starsVisualHtml} <span>${lawyer.rating} ratings</span></div>
+            <p><em>Expand for details</em></p>
+          </div>
+        </div>
+  
+        <div class="schedule">
+          <strong>Jadwal Tersedia</strong>
+          <div class="schedule-grid">
+            ${lawyer.schedules.map(time => `<button class="schedule-btn">${time}</button>`).join(" ")}
           </div>
         </div>
       </div>
-
-      <div class="tab-section">
-        <button class="tab active" data-tab="background">📄 Lawyer Background</button>
-        <button class="tab" data-tab="ratings">⭐ Lawyer Ratings</button>
-      </div>
-
-      <div id="backgroundContent" class="tab-pane active">
-        <div class="detail">
-          <p><strong>Alumni</strong><br>${alumniHtml}</p>
-          <p><strong>Wilayah</strong><br>${lawyer.location}</p>
-          <p><strong>No. NIA</strong><br>${lawyer.license}</p>
-        </div>
-      </div>
-
-      <div id="ratingsContent" class="tab-pane">
-        <div class="detail">
-          <p><strong>Detailed Ratings & Reviews</strong></p>
-          <div class="ratings-tab-stars">${starsVisualHtml} <span>${lawyer.rating} ratings</span></div>
-          <p><em>Expand for details</em></p>
-        </div>
-      </div>
-
-      <div class="schedule">
-        <strong>Jadwal Tersedia</strong>
-        <div class="schedule-grid">
-          ${lawyer.schedules.map(time => `<button class="schedule-btn">${time}</button>`).join(" ")}
-        </div>
-      </div>
-    </div>
-  `;
-  modal.style.display = "flex";
-
-  const tabButtons = modalContent.querySelectorAll(".tab");
-  const tabPanes = modalContent.querySelectorAll(".tab-pane");
-
-  tabButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      tabButtons.forEach(btn => btn.classList.remove("active"));
-      tabPanes.forEach(pane => pane.classList.remove("active"));
-      button.classList.add("active");
-      const targetPaneId = button.dataset.tab + "Content";
-      const targetPane = modalContent.querySelector('#' + targetPaneId);
-      if (targetPane) {
-        targetPane.classList.add("active");
-      } else {
-        console.error("Target pane not found:", targetPaneId);
-      }
+    `;
+    modal.style.display = "flex";
+  
+    const tabButtons = modalContent.querySelectorAll(".tab");
+    const tabPanes = modalContent.querySelectorAll(".tab-pane");
+  
+    tabButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        tabButtons.forEach(btn => btn.classList.remove("active"));
+        tabPanes.forEach(pane => pane.classList.remove("active"));
+        button.classList.add("active");
+        const targetPaneId = button.dataset.tab + "Content";
+        const targetPane = modalContent.querySelector('#' + targetPaneId);
+        if (targetPane) {
+          targetPane.classList.add("active");
+        } else {
+          console.error("Target pane not found:", targetPaneId);
+        }
+      });
     });
-  });
-
-  modalContent.querySelector('.contact-person-modal').addEventListener('click', () => {
-    console.log('Contacting from modal:', lawyer.name, lawyer.phone);
-    alert(`Contact ${lawyer.name} at ${lawyer.phone}`);
-  });
-
-  modalContent.querySelector('.download-portfolio-modal a').addEventListener('click', (e) => {
-    console.log('Downloading portfolio from modal for:', lawyer.name);
-    alert(`Portfolio for ${lawyer.name} will be downloaded.`);
-  });
-}
-
-if (closeModalBtn) {
-    closeModalBtn.addEventListener("click", () => {
-      modal.style.display = "none";
+  
+    modalContent.querySelector('.contact-person-modal').addEventListener('click', () => {
+      console.log('Contacting from modal:', lawyer.name, lawyer.phone);
+      alert(`Contact ${lawyer.name} at ${lawyer.phone}`);
     });
-}
-
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
+  
+    modalContent.querySelector('.download-portfolio-modal a').addEventListener('click', (e) => {
+      console.log('Downloading portfolio from modal for:', lawyer.name);
+      alert(`Portfolio for ${lawyer.name} will be downloaded.`);
+    });
+  }
+  window.openModal = openModal;
+  
+  if (closeModalBtn) {
+      closeModalBtn.addEventListener("click", () => {
         modal.style.display = "none";
-    }
+      });
+  }
+  
+  window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  });
+  
+  searchInput.addEventListener("input", e => {
+    const query = e.target.value.toLowerCase();
+    const filtered = lawyers.filter(lawyer =>
+      lawyer.name.toLowerCase().includes(query) ||
+      lawyer.type.toLowerCase().includes(query) ||
+      lawyer.location.toLowerCase().includes(query) ||
+      (lawyer.alumniList && lawyer.alumniList.some(uni => uni.toLowerCase().includes(query)))
+    );
+    renderLawyers(filtered);
+  });
+  
+  renderLawyers(lawyers);
 });
-
-
-searchInput.addEventListener("input", e => {
-  const query = e.target.value.toLowerCase();
-  const filtered = lawyers.filter(lawyer =>
-    lawyer.name.toLowerCase().includes(query) ||
-    lawyer.type.toLowerCase().includes(query) ||
-    lawyer.location.toLowerCase().includes(query) ||
-    (lawyer.alumniList && lawyer.alumniList.some(uni => uni.toLowerCase().includes(query)))
-  );
-  renderLawyers(filtered);
-});
-
-renderLawyers(lawyers);

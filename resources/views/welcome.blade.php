@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Nunito+Sans:opsz,wght@6..12,500&family=Poppins:wght@300&display=swap" rel="stylesheet"></head>
 
-    @vite('resources/css/app.css') {{-- Make sure your app uses Vite for styles --}}
+    @vite('resources/css/app.css')
 </head>
 <body class="bg-customBlue text-white min-h-screen flex items-center justify-center">
 

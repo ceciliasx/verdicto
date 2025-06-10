@@ -23,11 +23,12 @@ a {
 }
 
 .search-container input {
-  width: 60%;
-  padding: 12px 20px;
+  width: 100%;
+  padding: 12px 20px 12px 50px;
   border-radius: 10px;
   border: none;
   font-size: 16px;
+  color: #000;
 }
 
 .lawyer-grid {
@@ -36,6 +37,7 @@ a {
   gap: 40px;
   padding: 0 50px;
   flex-wrap: wrap;
+  padding-bottom: 5%;
 }
 
 .column {

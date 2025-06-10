@@ -1,12 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-customWhite leading-tight">
+        <h2 class="font-semibold text-2xl text-customWhite leading-tight">
             {{ __('Profile') }}
         </h2>
     </x-slot>
 
     <div class="pt-0">
-        <div class="max-w-7xl py-6 mx-auto sm:px-6 lg:px-8 space-y-6">
+        <div class="max-w-7xl pb-6 mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-customFont shadow sm:rounded-lg">
                 <div class="max-w-xl">
                     @include('profile.partials.update-profile-information-form')

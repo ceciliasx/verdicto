@@ -1,29 +1,20 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Verdicto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Nunito+Sans:opsz,wght@6..12,500&family=Poppins:wght@300&display=swap" rel="stylesheet"></head>
+<x-app-layout>
+    @section('styles')
+        @vite('resources/css/lawyer_style.css')
+    @endsection
 
-    @vite('resources/css/app.css') {{-- Make sure your app uses Vite for styles --}}
-</head>
-<body class="bg-customBlue text-white min-h-screen flex items-center justify-center">
+    <x-search-box id="search" placeholder="Cari pengacara di sini..." />
 
-    <div class="text-center space-y-6">
-        <img src="{{ asset('assets/logo_blue.png') }}" alt="Logo" class="mx-auto w-auto h-auto">
+    {{-- <div class="lawyer-grid" id="lawyerGrid"></div>
 
-        <div class="space-x-4">
-            <a href="{{ route('login') }}" class="inline-block px-6 py-3 bg-customWhite hover:bg-customYellow rounded-lg text-customBlue hover:text-customWhite rounded-lg font-semibold transition ease-in-out duration-120">
-                Login
-            </a>
-            <a href="{{ route('register') }}" class="inline-block px-6 py-3 bg-customWhite hover:bg-customYellow rounded-lg text-customBlue hover:text-customWhite rounded-lg font-semibold transition ease-in-out duration-120">
-                Register
-            </a>
+    <div class="modal" id="lawyerModal">
+        <div class="modal-box">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalContent"></div>
         </div>
-    </div>
+    </div> --}}
 
-</body>
-</html>
+    @section('scripts')
+        @vite('resources/js/lawyer_script.js')
+    @endsection
+</x-app-layout>
