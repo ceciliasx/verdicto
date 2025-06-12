@@ -22,7 +22,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('lawyer.index') }}"
+                        <a href="{{ route('lawyers.index') }}"
                         class="text-lg text-customFont hover:font-bold hover:text-customYellow
                         {{ request()->routeIs('lawyer.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
                         Lawyer
@@ -31,7 +31,7 @@
                     <li>
                         <a href="{{ route('article.index') }}"
                         class="text-lg text-customFont hover:font-bold hover:text-customYellow
-                        {{ request()->routeIs('article.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
+                        {{ request()->routeIs('articles.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
                         Article
                         </a>
                     </li>

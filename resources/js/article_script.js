@@ -129,7 +129,7 @@ const articles = {
 };
 
 const articlesEls = document.querySelectorAll("[data-id]");
-const searchInput = document.querySelector('.search-container');
+const searchInput = document.getElementById('search');
 const articleSection = document.querySelector('.article-rec');
 const heading = document.querySelector('.rec-text');
 

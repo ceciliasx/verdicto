@@ -19,9 +19,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
-Route::get('/lawyer', [LawyerController::class, 'index'])->name('lawyer.index');
-
+Route::get('/articles', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/lawyers', [LawyerController::class, 'index'])->name('lawyers.index');
 Route::get('/aboutus', function () {
     return view('aboutus.aboutus');
 });
