@@ -1,67 +1,67 @@
 <x-app-layout>
     <main class="mainabout">
         <section id="about-verdicto">
-            <h2 class="hadua"><strong>ABOUT VERDICTO</strong></h2>
-            <p>Our mission is to make the law accessible and understandable for everyone. VERDICTO contains a wealth of free, up-to-date, and easily understandable legal information and tools. We also offer the most comprehensive lawyer directory on the internet. We help connect people with legal issues to the right professionals who are ready to help.</p>
+            <h2 class="hadua"><strong>TENTANG VERDICTO</strong></h2>
+            <p>Misi kami adalah menjadikan hukum dapat diakses dan dimengerti oleh semua orang. VERDICTO berisi banyak informasi dan alat hukum yang gratis, terkini, dan mudah dipahami. Kami juga menawarkan direktori pengacara terlengkap di internet. Kami membantu menghubungkan orang-orang yang memiliki masalah hukum dengan profesional yang tepat yang siap membantu.</p>
 
-            <p>VERDICTO is the world's leading provider of online legal information for consumers and small businesses. We are also the industry leader in internet marketing solutions for law firms.</p>
+            <p>VERDICTO adalah penyedia informasi hukum online terkemuka di dunia untuk konsumen dan usaha kecil. Kami juga merupakan pemimpin industri dalam solusi pemasaran internet untuk firma hukum.</p>
 
-            <p>Each month, more than 11 million people visit VERDICTO seeking in-depth articles, news, case law, and statutes on a wide variety of legal topics and practice areas. It is the most popular site for free legal information on the internet and has been since its inception in 2025.</p>
+            <p>Setiap bulan, lebih dari 11 juta orang mengunjungi VERDICTO untuk mencari artikel, berita, kasus hukum, dan undang-undang mendalam tentang berbagai topik dan bidang praktik hukum. Ini adalah situs paling populer untuk informasi hukum gratis di internet dan telah berdiri sejak didirikan pada tahun 2025.</p>
 
-            <p><strong>VERDICTO for Consumers</strong><br>
-            For consumers, VERDICTO offers accessible information to enable everyone to better understand the law, make more informed legal decisions, and find quality legal help. We are debunking the myth that quality online legal information is confusing, expensive, and hard to find.</p>
+            <p><strong>VERDICTO untuk Pengguna</strong><br>
+            Bagi konsumen, VERDICTO menawarkan informasi yang dapat diakses untuk memungkinkan setiap orang memahami hukum dengan lebih baik, membuat keputusan hukum yang lebih tepat, dan mendapatkan bantuan hukum yang berkualitas. Kami membantah mitos bahwa informasi hukum online yang berkualitas membingungkan, mahal, dan sulit ditemukan.</p>
         </section>
 
         <section id="about-us">
-            <h2 class="hadua"><strong>OUR TEAM</strong></h2>
-            <p class="team"><strong>VERDICTO Team</strong></p>
+            <h2 class="hadua"><strong>TIM KAMI</strong></h2>
+            <p class="team"><strong>Tim VERDICTO</strong></p>
             <ul>
                 <li>2702265995 - Mary Anggita Priscilla</li>
                 <li>2702241300 - Nidya Hersiti Tjokroseputro</li>
-                <li>2702302542 - Benedicta Joyce Sutandyo</li>
+                <li>2702302542 - Benedicta Joyce Sutandoyo</li>
                 <li>2702303210 - Agnes Julia Purnomo</li>
                 <li>2702353442 - Ivan Angnata</li>
             </ul>
         </section>
 
         <section id="accessibility">
-            <h2 class="hadua"><strong>ACCESSIBILITY</strong></h2>
-            <p><strong>Our Commitment to Accessibility</strong><br>
-            VERDICTO recognizes the need to develop electronic and information technology (E&IT) products and services that are accessible and usable by all people, including those with disabilities. We strive to design products and services to conform to Section 508 of the Rehabilitation Act of 1973 (Electronic and Information Technology Accessibility Standards, 36 C.F.R. 1194), and other applicable accessibility standards, to the maximum extent practicable.</p>
+            <h2 class="hadua"><strong>AKSESIBILITAS</strong></h2>
+            <p><strong>Komitmen Kami untuk Aksesibilitas</strong><br>
+            VERDICTO menyadari kebutuhan untuk mengembangkan produk dan layanan teknologi elektronik dan informasi (E&IT) yang dapat diakses dan digunakan oleh semua orang, termasuk penyandang disabilitas. Kami berusaha merancang produk dan layanan agar sesuai dengan Pasal 508 Undang-Undang Rehabilitasi tahun 1973 (Standar Aksesibilitas Elektronik dan Teknologi Informasi, 36 C.F.R. 1194), dan standar aksesibilitas lain yang berlaku, semaksimal mungkin.</p>
 
-            <p><strong>Our Actions to Improve Accessibility</strong><br>
-            At VERDICTO, we view accessibility as an ongoing effort. We are actively taking steps, including performing website audits with industry experts, to ensure VERDICTO and our other web properties meet or exceed accessibility standards.</p>
+            <p><strong>Tindakan Kami untuk Meningkatkan Aksesibilitas</strong><br>
+            Di VERDICTO, kami memandang aksesibilitas sebagai upaya berkelanjutan. Kami secara aktif mengambil langkah-langkah, termasuk melakukan audit situs web dengan pakar industri, untuk memastikan VERDICTO dan properti web kami yang lain memenuhi atau melampaui standar aksesibilitas.</p>
 
-            <p><strong>Feedback or Questions?</strong><br>
-            If you have comments or questions about the accessibility of VERDICTO, or have difficulty accessing any part of this website, please email mary.priscilla@binus.ac.id.</p>
+            <p><strong>Masukan atau Pertanyaan</strong><br>
+            Jika Anda memiliki komentar atau pertanyaan tentang aksesibilitas VERDICTO, atau mengalami kesulitan mengakses bagian mana pun dari situs web ini, silakan kirim email ke mary.priscilla@binus.ac.id.</p>
         </section>
 
         <section id="contact-us">
-            <h2 class="hadua"><strong>CONTACT US</strong></h2>
-            <p><strong>Helpful Contacts</strong><br>
-            At VERDICTO, we pride ourselves on being the number one source of free legal information and resources on the web. The following contacts can help you make the best use of our site and find the answers you need.</p>
+            <h2 class="hadua"><strong>HUBUNGI KAMI</strong></h2>
+            <p><strong>Kontak Bantuan</strong><br>
+            Di VERDICTO, kami bangga menjadi sumber informasi dan sumber hukum gratis nomor satu di web. Kontak berikut dapat membantu Anda memanfaatkan situs kami sebaik-baiknya dan menemukan jawaban yang Anda butuhkan.</p>
 
-            <p><strong>Looking for an Attorney?</strong><br>
-            We are not a law firm and cannot offer legal advice, but you can visit the VERDICTO Lawyer Directory to find a lawyer in your area.</p>
+            <p><strong>Mencari Pengacara?</strong><br>
+            Kami bukan firma hukum dan tidak dapat menawarkan nasihat hukum, namun Anda dapat mengunjungi Direktori Pengacara VERDICTO untuk mencari pengacara di wilayah Anda.</p>
 
-            <p><strong>Need Help With a DIY Form?</strong><br>
-            Please visit our FAQ page for answers to common questions. If you have questions about your order, please contact our support team by logging into your account to start a chat or by calling us at 1-800-591-9378 Monday through Friday from 8:00 am to 5:30 pm CST.</p>
+            <p><strong>Butuh Bantuan Dengan Formulir?</strong><br>
+            Silakan kunjungi halaman FAQ kami untuk jawaban atas pertanyaan umum. Jika Anda memiliki pertanyaan tentang permintaan Anda, silakan hubungi tim dukungan kami dengan masuk ke akun Anda untuk memulai obrolan atau dengan menghubungi kami dengan mengirim email ke ivan.angnata@binus.ac.id.</p>
 
-            <p><strong>Need Help Marketing Your Firm?</strong><br>
-            VERDICTO Lawyer Marketing offers integrated marketing solutions for law firms.</p>
+            <p><strong>Butuh Bantuan Memasarkan Perusahaan Anda?</strong><br>
+            VERDICTO Lawyer Marketing menawarkan solusi pemasaran terintegrasi untuk firma hukum.</p>
 
-            <p><strong>Are You a Directory/Website Customer?</strong><br>
-            Need to update your profile? Having trouble navigating the directory? Reach out to our directory team for assistance using this form or contact us by phone at 1.800.455.4565 and choose option 2.</p>
+            <p><strong>Apakah Anda Pelanggan Direktori/Situs Web?</strong><br>
+            Perlu memperbarui profil Anda? Mengalami kesulitan menavigasi direktori? Hubungi tim kami untuk mendapatkan bantuan menggunakan formulir ini atau hubungi kami melalui email ke benedicta.sutandoyo@binus.ac.id.</p>
 
-            <p>To reach a customer service agent that can assist with the VERDICTO directory or website billing questions, call 1.800.455.4565 and choose option 1, or send an email.</p>
+            <p>Untuk menghubungi agen layanan pelanggan yang dapat membantu dengan direktori VERDICTO atau pertanyaan penagihan situs web, hubungi email ke agnes.purnomo@binus.ac.id.</p>
 
-            <p>If you would like to reach your client manager regarding your digital marketing subscriptions, please call 1.800.455.4565 and choose option 3.</p>
+            <p>Jika Anda ingin menghubungi manajer klien Anda mengenai langganan pemasaran digital Anda, silakan hubungi email ke nidya.tjokroseputro@binus.ac.id.</p>
 
-            <p><strong>Have a Comment, Concern, or Question?</strong><br>
-            Review some of our common question topics to ensure your request reaches the right part of our business.</p>
+            <p><strong>Punya Komentar, Kekhawatiran, atau Pertanyaan?</strong><br>
+            Tinjau beberapa topik pertanyaan umum kami untuk memastikan permintaan Anda diterima oleh pihak yang tepat dalam bisnis kami.</p>
 
-            <p><strong>Looking for Our Business Address?</strong><br>
-            You can mail feedback to our headquarters:<br>
+            <p><strong>Mencari Alamat Bisnis Kami?</strong><br>
+            Anda dapat mengirimkan umpan balik ke kantor pusat kami:<br>
             Verdicto. Jakarta, Indonesia, 2025.</p>
         </section>
     </main>

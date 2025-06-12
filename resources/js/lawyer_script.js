@@ -1,6 +1,4 @@
-// resources/js/lawyer_script.js
-
- const lawyers = [
+const lawyers = [
   {
     name: "Rani Puspita Dewi, S.H., M.H.",
     type: "Pengacara Perdata",
@@ -123,11 +121,11 @@ document.addEventListener("DOMContentLoaded", function (){
             <div class="card-text">
               <h3><strong>${lawyer.name}</strong></h3>
               <p class="specialty">${lawyer.type}</p>
-              <div class="stars">⭐⭐⭐⭐⭐ <span>${lawyer.rating} ratings</span></div>
-              <p class="experience">🗓️ ${lawyer.experience} years experience</p>
+              <div class="stars">⭐⭐⭐⭐⭐ <span>${lawyer.rating} penilaian</span></div>
+              <p class="experience">🗓️ ${lawyer.experience} tahun pengalaman</p>
               <div class="actions">
-                <button class="contact-btn">Contact Person</button>
-                <button><a href="#" download class="download-btn">Download Portofolio ⬇️</a></button>
+                <button class="contact-btn">Hubungi</button>
+                <button><a href="#" download class="download-btn">Unduh Portofolio ⬇️</a></button>
               </div>
             </div>
           </div>
@@ -172,33 +170,33 @@ document.addEventListener("DOMContentLoaded", function (){
           <div class="header-info">
             <h3><strong>${lawyer.name}</strong></h3>
             <p class="specialty">${lawyer.type}</p>
-            <div class="stars">${headerStarsVisualHtml} <span>${lawyer.rating} ratings</span></div>
-            <p class="experience">🗓️ ${lawyer.experience} years experience</p>
+            <div class="stars">${headerStarsVisualHtml} <span>${lawyer.rating} penilaian</span></div>
+            <p class="experience">🗓️ ${lawyer.experience} tahun pengalaman</p>
             <div class="modal-actions">
-              <button class="contact-person-modal">Contact Person</button>
-              <button class="download-portfolio-modal"><a href="#" download>Download Portofolio ⬇️</a></button>
+              <button class="contact-person-modal">Hubungi</button>
+              <button class="download-portfolio-modal"><a href="#" download>Unduh Portofolio ⬇️</a></button>
             </div>
           </div>
         </div>
   
         <div class="tab-section">
-          <button class="tab active" data-tab="background">📄 Lawyer Background</button>
-          <button class="tab" data-tab="ratings">⭐ Lawyer Ratings</button>
+          <button class="tab active" data-tab="background">📄 Latar Belakang</button>
+          <button class="tab" data-tab="ratings">⭐ Penilaian</button>
         </div>
   
         <div id="backgroundContent" class="tab-pane active">
           <div class="detail">
-            <p><strong>Alumni</strong><br>${alumniHtml}</p>
-            <p><strong>Wilayah</strong><br>${lawyer.location}</p>
+            <p><strong>Riwayat Pendidikan</strong><br>${alumniHtml}</p>
+            <p><strong>Domisili</strong><br>${lawyer.location}</p>
             <p><strong>No. NIA</strong><br>${lawyer.license}</p>
           </div>
         </div>
   
         <div id="ratingsContent" class="tab-pane">
           <div class="detail">
-            <p><strong>Detailed Ratings & Reviews</strong></p>
-            <div class="ratings-tab-stars">${starsVisualHtml} <span>${lawyer.rating} ratings</span></div>
-            <p><em>Expand for details</em></p>
+            <p><strong>Ulasan</strong></p>
+            <div class="ratings-tab-stars">${starsVisualHtml} <span>${lawyer.rating} penilaian</span></div>
+            <p><em>Sangat membantu!</em></p>
           </div>
         </div>
   
@@ -232,12 +230,12 @@ document.addEventListener("DOMContentLoaded", function (){
   
     modalContent.querySelector('.contact-person-modal').addEventListener('click', () => {
       console.log('Contacting from modal:', lawyer.name, lawyer.phone);
-      alert(`Contact ${lawyer.name} at ${lawyer.phone}`);
+      alert(`Hubungi ${lawyer.name} melalui ${lawyer.phone}`);
     });
   
     modalContent.querySelector('.download-portfolio-modal a').addEventListener('click', (e) => {
       console.log('Downloading portfolio from modal for:', lawyer.name);
-      alert(`Portfolio for ${lawyer.name} will be downloaded.`);
+      alert(`Mengunduh portofolio ${lawyer.name}.`);
     });
   }
   window.openModal = openModal;
@@ -329,7 +327,6 @@ function openModal(lawyer) {
     const alumniHtml = lawyer.alumniList.map(item => `<span>${item}</span>`).join('<br>');
     const headerStarsVisualHtml = '⭐'.repeat(Math.floor(lawyer.rating));
 
-    // This is your detailed modal HTML structure from the original file
     modalContent.innerHTML = `
       
       <div class="profile-detail">
@@ -338,18 +335,18 @@ function openModal(lawyer) {
           <div class="header-info">
             <h3><strong>${lawyer.name}</strong></h3>
             <p class="specialty">${lawyer.type}</p>
-            <div class="stars">${headerStarsVisualHtml} <span>${lawyer.rating} ratings</span></div>
-            <p class="experience">🗓️ ${lawyer.experience} years experience</p>
+            <div class="stars">${headerStarsVisualHtml} <span>${lawyer.rating} penilaian</span></div>
+            <p class="experience">🗓️ ${lawyer.experience} tahun pengalaman</p>
             <div class="modal-actions">
-              <button class="contact-person-modal">Contact Person</button>
-              <button class="download-portfolio-modal"><a href="#" download>Download Portofolio ⬇️</a></button>
+              <button class="contact-person-modal">Hubungi</button>
+              <button class="download-portfolio-modal"><a href="#" download>Unduh Portofolio ⬇️</a></button>
             </div>
           </div>
         </div>
   
         <div class="tab-section">
           <button class="tab active" data-tab="background">📄 Lawyer Background</button>
-          <button class="tab" data-tab="ratings">⭐ Lawyer Ratings</button>
+          <button class="tab" data-tab="ratings">⭐ Penilaian</button>
         </div>
   
         <div id="backgroundContent" class="tab-pane active">
@@ -363,7 +360,7 @@ function openModal(lawyer) {
         <div id="ratingsContent" class="tab-pane">
           <div class="detail">
             <p><strong>Detailed Ratings & Reviews</strong></p>
-            <div class="ratings-tab-stars">${starsVisualHtml} <span>${lawyer.rating} ratings</span></div>
+            <div class="ratings-tab-stars">${starsVisualHtml} <span>${lawyer.rating} penilaian</span></div>
             <p><em>Expand for details</em></p>
           </div>
         </div>

@@ -16,10 +16,10 @@
         <img src="{{ asset('assets/logo_blue.png') }}" alt="Logo" class="mx-auto w-auto h-auto">
 
         <div class="space-x-4">
-            <a href="{{ route('login') }}" class="inline-block px-6 py-3 bg-customWhite hover:bg-customYellow rounded-lg text-customBlue hover:text-customWhite rounded-lg font-semibold transition ease-in-out duration-120">
+            <a href="{{ route('login') }}" class="inline-block px-6 py-3 bg-customWhite hover:bg-customYellow rounded-lg text-customBlue hover:text-customWhite font-semibold transition ease-in-out duration-120">
                 Login
             </a>
-            <a href="{{ route('register') }}" class="inline-block px-6 py-3 bg-customWhite hover:bg-customYellow rounded-lg text-customBlue hover:text-customWhite rounded-lg font-semibold transition ease-in-out duration-120">
+            <a href="{{ route('register') }}" class="inline-block px-6 py-3 bg-customWhite hover:bg-customYellow rounded-lg text-customBlue hover:text-customWhite font-semibold transition ease-in-out duration-120">
                 Register
             </a>
         </div>

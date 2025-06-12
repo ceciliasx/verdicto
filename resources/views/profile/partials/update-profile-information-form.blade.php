@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-customWhite">
-            {{ __('Profile Information') }}
+            {{ __('Informasi Profil') }}
         </h2>
 
         <p class="mt-1 text-sm text-customWhite">
-            {{ __("Update your account's profile information.") }}
+            {{ __("Perbarui informasi profil akun Anda.") }}
         </p>
     </header>
 
@@ -18,7 +18,7 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
+            <x-input-label for="name" :value="__('Nama')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
@@ -48,28 +48,28 @@
         </div>
 
         <div>
-            <x-input-label for="phone" :value="__('Phone Number')" />
+            <x-input-label for="phone" :value="__('Nomor HP')" />
             <x-text-input id="phone" name="phone" type="text" class="mt-1 block w-full" :value="old('phone', $user->phone)" required pattern="08[0-9]{8,13}" />
             <x-input-error class="mt-2" :messages="$errors->get('phone')" />
         </div>
         
         <div>
-            <x-input-label for="gender" :value="__('Gender')" />
+            <x-input-label for="gender" :value="__('Jenis Kelamin')" />
 
             <div class="flex items-center gap-4 mt-2">
                 <label class="inline-flex items-center text-customWhite">
                     <input type="radio" name="gender" value="male" {{ old('gender') == 'male' ? 'checked' : '' }} class="form-radio text-customYellow">
-                    <span class="ml-2">Male</span>
+                    <span class="ml-2">Laki-laki</span>
                 </label>
 
                 <label class="inline-flex items-center text-customWhite">
                     <input type="radio" name="gender" value="female" {{ old('gender') == 'female' ? 'checked' : '' }} class="form-radio text-customYellow">
-                    <span class="ml-2">Female</span>
+                    <span class="ml-2">Perempuan</span>
                 </label>
 
                 <label class="inline-flex items-center text-customWhite">
                     <input type="radio" name="gender" value="others" {{ old('gender') == 'others' ? 'checked' : '' }} class="form-radio text-customYellow">
-                    <span class="ml-2">Others</span>
+                    <span class="ml-2">Lainnya</span>
                 </label>
             </div>
 
@@ -78,22 +78,22 @@
 
         <div>
             <x-input-label for="role" :value="__('Role')" />
-            <select id="role" name="role" required class="mt-1 block w-full border-gray-300 group-hover:block:bg-customYellow rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-120 ease-in-out">
-                <option class="hover:bg-customYellow" value="">-- Select Role --</option>
-                <option value="client" {{ old('role') == 'client' ? 'selected' : '' }}>Client</option>
-                <option value="lawyer" {{ old('role') == 'lawyer' ? 'selected' : '' }}>Lawyer</option>
+            <select id="role" name="role" required class="text-customFont mt-1 block w-full border-gray-300 group-hover:block:bg-customYellow rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-120 ease-in-out">
+                <option class="hover:bg-customYellow" value="">-- Pilih Peran --</option>
+                <option value="client" {{ old('role') == 'client' ? 'selected' : '' }}>Klien</option>
+                <option value="lawyer" {{ old('role') == 'lawyer' ? 'selected' : '' }}>Pengacara</option>
             </select>
             <x-input-error :messages="$errors->get('role')" class="mt-2" />
         </div>
 
         <div>
-            <x-input-label for="city" :value="__('City')" />
+            <x-input-label for="city" :value="__('Domisili')" />
             <x-text-input id="city" name="city" type="text" class="mt-1 block w-full" :value="old('city', $user->city)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('city')" />
         </div>
                 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Simpan') }}</x-primary-button>
             
             @if (session('status') === 'profile-updated')
                 <p
@@ -102,7 +102,7 @@
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __('Saved.') }}</p>
+                >{{ __('Berhasil tersimpan!') }}</p>
             @endif
             </div>
     </form>

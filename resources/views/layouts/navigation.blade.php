@@ -18,33 +18,25 @@
                         <a href="{{ route('dashboard') }}"
                         class="text-lg text-customFont hover:font-bold hover:text-customYellow
                         {{ request()->routeIs('dashboard') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
-                        Home
+                        Beranda
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('lawyers.index') }}"
                         class="text-lg text-customFont hover:font-bold hover:text-customYellow
-                        {{ request()->routeIs('lawyer.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
-                        Lawyer
+                        {{ request()->routeIs('lawyers.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
+                        Pengacara
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('article.index') }}"
                         class="text-lg text-customFont hover:font-bold hover:text-customYellow
-                        {{ request()->routeIs('articles.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
-                        Article
+                        {{ request()->routeIs('article.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
+                        Artikel
                         </a>
                     </li>
                 </ul>
             </div>
-
-            {{-- <div id="links" class="hidden sm:flex items-center">
-                <ul class="direct flex space-x-6">
-                    <li><a href="{{route('dashboard')}}" class="text-lg text-customFont hover:font-bold hover:text-customYellow">Home</a></li>
-                    <li><a href="{{route('lawyer.index')}}" class="text-lg text-customFont hover:font-bold hover:text-customYellow">Lawyer</a></li>
-                    <li><a href="{{route('article.index')}}" class="text-lg text-customFont hover:font-bold hover:text-customYellow">Article</a></li>
-                </ul>
-            </div> --}}
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center">

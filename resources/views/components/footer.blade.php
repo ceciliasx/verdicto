@@ -4,22 +4,21 @@
       <img src="{{ asset('assets/logo_blue.png') }}" alt="VERDICTO Logo">
       <div class="footer-question">
         <p>
-          At VERDICTO, we pride ourselves on being the number one source of free legal information and resources on the web.
-        </p>
+          Di VERDICTO, kami bangga menjadi sumber informasi dan sumber daya hukum gratis nomor satu di web.        </p>
       </div>
     </div>
 
     <div class="footer-middle">
-      <h3><u><a href="{{ url('/aboutus#about-verdicto') }}"><strong>ABOUT US</strong></a></u></h3>
+      <h3><u><a href="{{ url('/aboutus#about-verdicto') }}"><strong>TENTANG KAMI</strong></a></u></h3>
       <ul>
-        <li><a href="{{ url('/aboutus#about-us') }}">Our Team</a></li>
-        <li><a href="{{ url('/aboutus#accessibility') }}">Accessibility</a></li>
-        <li><a href="{{ url('/aboutus#contact-us') }}">Contact Us</a></li>
+        <li><a href="{{ url('/aboutus#about-us') }}">Tim Kami</a></li>
+        <li><a href="{{ url('/aboutus#accessibility') }}">Aksesibilitas</a></li>
+        <li><a href="{{ url('/aboutus#contact-us') }}">Kontak Kami</a></li>
       </ul>
     </div>
 
     <div class="footer-social">
-      <h3><u><strong>FOLLOW US</strong></u></h3>
+      <h3><u><strong>IKUTI KAMI</strong></u></h3>
       <div class="social-icons">
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <img src="{{ asset('assets/x.png') }}" alt="X">
