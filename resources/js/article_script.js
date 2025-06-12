@@ -138,10 +138,10 @@ searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase();
 
   if (query.trim() === '') {
-    articleSection.classList.remove('vertical-layout');
+    articleSection.classList.remove('artile-rec');
     heading.style.display = 'block';
   } else {
-    articleSection.classList.add('vertical-layout');
+    articleSection.classList.add('article-rec');
     heading.style.display = 'none';
   }
 
