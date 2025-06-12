@@ -2,17 +2,15 @@
     @section('styles')
         @vite('resources/css/article_style.css')
     @endsection
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Nunito+Sans:opsz,wght@6..12,500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <x-search-box id="search" placeholder="Search Article"/>
+
     <div class="article-web">
-        <form>
-        <div class="search">
-            <span class="material-symbols-outlined">search</span>
-            <input class="search-input" type="search" placeholder="Search Article">
-        </div>
-        </form>
         <h2 class="rec-text", id="rec-title">Article Recommendation for You</h2>
         <div class="article-rec">
             <div class="flex-box", data-id='1'>

@@ -129,7 +129,7 @@ const articles = {
 };
 
 const articlesEls = document.querySelectorAll("[data-id]");
-const searchInput = document.querySelector('.search-input');
+const searchInput = document.querySelector('.search-container');
 const articleSection = document.querySelector('.article-rec');
 const heading = document.querySelector('.rec-text');
 
@@ -155,7 +155,6 @@ searchInput.addEventListener('input', () => {
     }
   });
 });
-
 
 
 articlesEls.forEach(el => {
