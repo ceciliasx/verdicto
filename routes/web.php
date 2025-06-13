@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\LawyerController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfilePictureController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,5 +26,8 @@ Route::get('/lawyers', [LawyerController::class, 'index'])->name('lawyers.index'
 Route::get('/aboutus', function () {
     return view('aboutus.aboutus');
 });
+
+Route::patch('/profile/picture', [ProfilePictureController::class, 'update'])->name('profile.picture.update');
+Route::delete('/profile/picture', [ProfilePictureController::class, 'destroyProfilePicture'])->name('profile.picture.delete');
 
 require __DIR__.'/auth.php';
