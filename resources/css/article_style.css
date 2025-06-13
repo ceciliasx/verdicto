@@ -60,6 +60,12 @@ body {
     margin: 20px 0;
     overflow: hidden;
     height: 200px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flex-box:hover{
+    border: 4px solid #FFB84D;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .image-half{

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&family=Nunito+Sans:opsz,wght@6..12,500&family=Poppins:wght@300&display=swap" rel="stylesheet">
 
-    <x-search-box class="search-input" placeholder="Cari artikel di sini..."/>
+    <x-search-box id="search" class="search-input" placeholder="Cari artikel di sini..."/>
     <div class="article-web">
         <h2 class="rec-text", id="rec-title">Rekomendasi Artikel untuk Anda</h2>
         <div class="article-rec">
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-        <div id="search-results" class="search-results hidden"></div>
+        <div id="search" class="search-results hidden"></div>
     </div>
     @section('scripts')
         @vite('resources/js/article_script.js')
