@@ -300,12 +300,10 @@ function renderLawyers(data) {
     }
 
     data.forEach(lawyer => {
-        // This is the card structure and style that you wanted
         const card = document.createElement("div");
         card.className = "cursor-pointer bg-customWhite p-3 rounded-[20px] shadow-lg text-gray-800 text-center transform hover:scale-105 transition-transform duration-300";
-        card.onclick = () => openModal(lawyer); // Set the click event to open the modal
+        card.onclick = () => openModal(lawyer);
         
-        // Populate the card's HTML with the lawyer's data
         card.innerHTML = `
             <img src="${lawyer.image}" alt="${lawyer.name}" class="w-full h-60 rounded-[17px] mx-auto mb-4 object-cover object-top">
             <h3 class="text-xl font-bold text-customBlue">${lawyer.name.split(",")[0]}</h3>

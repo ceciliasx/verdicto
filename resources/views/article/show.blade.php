@@ -6,7 +6,7 @@
     <div class="article-bg">
         <div class="article-page">
             <div class="article-hero">
-                <a href="{{ route('article.index') }}" id="back">← Back</a>
+                <a href="{{ route('article.index') }}" id="back">← Kembali</a>
 
                 <img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
 

@@ -34,15 +34,7 @@ body.footer{
 }
 
 .footer-content {
-  /* max-width: 1200px; */
   margin: 0 auto;
-  /* padding: 0 40px;
-  padding-left: calc(40px + 2cm);
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: flex-start;
-  align-items: flex-start; */
-  /* width: 100%; */
   justify-content: center;
   align-items: center;
 }
@@ -50,7 +42,6 @@ body.footer{
 .footer-left {
   flex: 2;
   min-width: 300px;
-  /* margin-left: -218px; */
   text-align: center;
   justify-content: center;
 }
@@ -58,7 +49,6 @@ body.footer{
 .footer-middle {
   flex: 1;
   min-width: 250px;
-  /* margin-left: -218px; */
   text-align: center;
   justify-content: center;
 }
@@ -119,12 +109,10 @@ body.footer{
 .footer-social {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   text-align: center;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
-  /* margin-left: -217px; */
 }
 
 .social-icons {
@@ -192,8 +180,6 @@ body.footer{
 
 
 /*RESPONSIVE DESIGN */
-
-/*1024px*/
 @media (max-width: 1024px) {
   .main-content {
     padding: 30px 15px;
@@ -259,7 +245,6 @@ body.footer{
   }
 }
 
-/*600px */
 @media (max-width: 600px) {
   .main-content {
     padding: 20px 10px;
@@ -365,7 +350,6 @@ body.footer{
   }
 }
 
-/*480px*/
 @media (max-width: 480px) {
   .footer-left img {
     max-width: 240px;

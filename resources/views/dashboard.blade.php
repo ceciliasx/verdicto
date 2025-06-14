@@ -33,21 +33,21 @@
                 <div onclick="openModal(lawyers[1])" class="cursor-pointer bg-customWhite p-3 rounded-[20px] shadow-lg text-gray-800 text-center transform hover:scale-105 transition-transform duration-300">
                     <img src="{{ asset('assets/images/Budi.png') }}" alt="Budi" class="w-full h-60 rounded-[17px] mx-auto mb-4 object-cover object-top">
                     <h3 class="text-lg font-bold text-customBlue">Budi Koestadi, S.H., M.H.</h3>
-                    <p class="text-customYellow font-semibold text-lg">★ 4.9</p> {{-- --}}
+                    <p class="text-customYellow font-semibold text-lg">★ 4.9</p>
                 </div>
 
                 {{-- Lawyer Card 3 (Andi) --}}
                 <div onclick="openModal(lawyers[2])" class="cursor-pointer bg-customWhite p-3 rounded-[20px] shadow-lg text-gray-800 text-center transform hover:scale-105 transition-transform duration-300">
                     <img src="{{ asset('assets/images/Andi.png') }}" alt="Andi" class="w-full h-60 rounded-[17px] mx-auto mb-4 object-cover object-top">
                     <h3 class="text-lg font-bold text-customBlue">Andi Darmawan, S.H., M.H.</h3>
-                    <p class="text-customYellow font-semibold text-lg">★ 4.9</p> {{-- --}}
+                    <p class="text-customYellow font-semibold text-lg">★ 4.9</p>
                 </div>
 
                 {{-- Lawyer Card 4 (Maryo) --}}
                 <div onclick="openModal(lawyers[3])" class="cursor-pointer bg-customWhite p-3 rounded-[20px] shadow-lg text-gray-800 text-center transform hover:scale-105 transition-transform duration-300">
                     <img src="{{ asset('assets/images/Maryo.png') }}" alt="Maryo" class="w-full h-60 rounded-[17px] mx-auto mb-4 object-cover object-top">
                     <h3 class="text-lg font-bold text-customBlue">Maryo Sunandar, S.H., M.H.</h3>
-                    <p class="text-customYellow font-semibold text-lg">★ 4.9</p> {{-- --}}
+                    <p class="text-customYellow font-semibold text-lg">★ 4.9</p>
                 </div>
             </div>
         </section>

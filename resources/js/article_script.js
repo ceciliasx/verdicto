@@ -166,7 +166,7 @@ articlesEls.forEach(el => {
             <div class="article-bg">
                 <div class="article-page">
                     <div class="article-hero">
-                        <button id="back">← Back</button>
+                        <button id="back">← Kembali</button>
                         <img src="${articles[id].image}" alt="${articles[id].title}">
                         <div class="overlay-text">
                         <h1>${articles[id].title}</h1>

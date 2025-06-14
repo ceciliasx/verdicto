@@ -1,5 +1,3 @@
-{{-- resources/views/components/search-box.blade.php --}}
-
 @props(['placeholder' => 'Search...', 'id' => 'search'])
 
 <form action="{{ route('lawyers.index') }}" method="GET" class="text-center my-8">
@@ -11,10 +9,10 @@
         </span>
         <input
             type="text"
-            name="search"  {{-- This name="search" is crucial for sending the query --}}
+            name="search"
             id="{{ $id }}"
             placeholder="{{ $placeholder }}"
-            value="{{ request('search') }}" {{-- This keeps the search term in the box --}}
+            value="{{ request('search') }}"
             class="w-full py-3 pl-16 pr-4 text-lg text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-customYellow focus:border-transparent shadow-md"
         />
     </div>
