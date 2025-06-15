@@ -113,7 +113,6 @@
         </div>
     </div>
 
-
     @section('scripts')
         @vite('resources/js/lawyer_script.js')
     @endsection

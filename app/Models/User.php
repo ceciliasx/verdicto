@@ -26,6 +26,11 @@ class User extends Authenticatable
         'role',
         'city',
         'photo_path',
+        'license_path',
+        'portfolio_path',
+        'education',
+        'domicile',
+        'schedule',
     ];
 
     /**

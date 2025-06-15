@@ -104,6 +104,6 @@
                     class="text-sm text-gray-600 dark:text-gray-400"
                 >{{ __('Berhasil tersimpan!') }}</p>
             @endif
-            </div>
+        </div>
     </form>
 </section>

@@ -35,8 +35,27 @@
                         Artikel
                         </a>
                     </li>
+                    @auth
+                        @if(Auth::user()->role === 'lawyer')
+                            <li>
+                                <a href="{{ route('lawyer.edit') }}"
+                                class="text-lg text-customFont hover:font-bold hover:text-customYellow
+                                {{ request()->routeIs('lawyer.edit') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
+                                Profil Pengacara
+                                </a>
+                            </li>
+                        @endif
+                    @endauth
                 </ul>
             </div>
+
+            <!-- Display Profile Picture -->
+            @php
+                $user = Auth::user();
+                $photoUrl = $user->photo_path
+                    ? asset('storage/' . $user->photo_path)
+                    : asset('storage/profile-pictures/default-profile.png');
+            @endphp
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center">
@@ -44,7 +63,7 @@
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-customWhite bg-customBlue hover:text-customBlue hover:bg-customWhite hover:border-customBlue focus:outline-none transition ease-in-out duration-120">
                             <div>{{ Auth::user()->name }}</div>
-
+                            
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -52,26 +71,29 @@
                             </div>
                         </button>
                     </x-slot>
-
+                    
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
-
+                        
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
+                            
                             <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                            onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
                 </x-dropdown>
+                <div class="hidden sm:flex sm:items-center sm:ml-6">
+                    <img src="{{ $photoUrl }}" alt="{{ $user->name }}" class="w-10 h-10 rounded-full object-cover border-2 border-customBlue shadow-sm">
+                </div>
             </div>
-
+            
             <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
@@ -88,8 +110,15 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('Beranda') }}
             </x-responsive-nav-link>
+            @auth
+                @if(Auth::user()->role === 'lawyer')
+                    <x-responsive-nav-link :href="route('lawyer.edit')" :active="request()->routeIs('lawyer.edit')">
+                        {{ __('Profil Pengacara') }}
+                    </x-responsive-nav-link>
+                @endif
+            @endauth
         </div>
 
         <!-- Responsive Settings Options -->
