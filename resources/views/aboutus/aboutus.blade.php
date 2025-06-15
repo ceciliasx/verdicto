@@ -67,7 +67,7 @@
                     Verdicto, Jakarta, Indonesia, 2025
                 </a>
             </address>
-            <div style="display: flex; justify-content: center; margin-top: 1rem;">
+            <div class="flex justify-center items-center mt-4">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.468502425802!2d106.78225470000001!3d-6.2017585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6dcc7d2c4ad%3A0x209cb1eef39be168!2sBINUS%20UNIVERSITY%20-%20Anggrek%20Campus!5e0!3m2!1sen!2sid!4v1750013830945!5m2!1sen!2sid"
                     width="500"

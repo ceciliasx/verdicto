@@ -16,21 +16,21 @@
                 <ul class="direct flex space-x-6">
                     <li>
                         <a href="{{ route('dashboard') }}"
-                        class="text-lg text-customFont hover:font-bold hover:text-customYellow
+                        class="text-lg text-customFont hover:underline hover:underline-offset-8 hover:text-customYellow
                         {{ request()->routeIs('dashboard') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
                         Beranda
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('lawyers.index') }}"
-                        class="text-lg text-customFont hover:font-bold hover:text-customYellow
+                        class="text-lg text-customFont hover:underline hover:underline-offset-8 hover:text-customYellow
                         {{ request()->routeIs('lawyers.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
                         Pengacara
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('article.index') }}"
-                        class="text-lg text-customFont hover:font-bold hover:text-customYellow
+                        class="text-lg text-customFont hover:underline hover:underline-offset-8 hover:text-customYellow
                         {{ request()->routeIs('article.index') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
                         Artikel
                         </a>
@@ -39,7 +39,7 @@
                         @if(Auth::user()->role === 'lawyer')
                             <li>
                                 <a href="{{ route('lawyer.edit') }}"
-                                class="text-lg text-customFont hover:font-bold hover:text-customYellow
+                                class="text-lg text-customFont hover:underline hover:underline-offset-8 hover:text-customYellow
                                 {{ request()->routeIs('lawyer.edit') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
                                 Profil Pengacara
                                 </a>
@@ -74,7 +74,7 @@
                     
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Profil') }}
                         </x-dropdown-link>
                         
                         <!-- Authentication -->
@@ -84,7 +84,7 @@
                             <x-dropdown-link :href="route('logout')"
                             onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Keluar') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -107,10 +107,16 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden bg-customWhite text-customFont shadow-md">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Beranda') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('lawyers.index')" :active="request()->routeIs('lawyers.index')">
+                {{ __('Pengacara') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('article.index')" :active="request()->routeIs('article.index')">
+                {{ __('Artikel') }}
             </x-responsive-nav-link>
             @auth
                 @if(Auth::user()->role === 'lawyer')
@@ -122,15 +128,15 @@
         </div>
 
         <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
+        <div class="pt-4 pb-1 border-t">
             <div class="px-4">
-                <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
+                <div class="font-medium text-base">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div>
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
+                    {{ __('Profil') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->
@@ -140,7 +146,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                        {{ __('Keluar') }}
                     </x-responsive-nav-link>
                 </form>
             </div>
