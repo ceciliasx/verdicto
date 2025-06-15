@@ -13,7 +13,7 @@
             id="{{ $id }}"
             placeholder="{{ $placeholder }}"
             value="{{ request('search') }}"
-            class="w-full py-3 pl-16 pr-4 text-lg text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-customYellow focus:border-transparent shadow-md"
+            class="w-full py-3 pl-16 pr-4 text-lg text-gray-700 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-customYellow focus:border-transparent shadow-md"
         />
     </div>
 </form>

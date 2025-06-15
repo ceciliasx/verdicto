@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-2xl text-customWhite leading-tight">
-            {{ __('Sunting Profil Pengacara') }}
+            {{ __('Sunting Data Pengacara') }}
         </h2>
     </x-slot>
 

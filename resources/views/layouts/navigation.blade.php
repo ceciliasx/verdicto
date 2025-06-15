@@ -41,7 +41,7 @@
                                 <a href="{{ route('lawyer.edit') }}"
                                 class="text-lg text-customFont hover:underline hover:underline-offset-8 hover:text-customYellow
                                 {{ request()->routeIs('lawyer.edit') ? 'underline underline-offset-8 decoration-customYellow text-customYellow font-semibold' : '' }}">
-                                Profil Pengacara
+                                Data
                                 </a>
                             </li>
                         @endif
@@ -61,7 +61,7 @@
             <div class="hidden sm:flex sm:items-center">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-customWhite bg-customBlue hover:text-customBlue hover:bg-customWhite hover:border-customBlue focus:outline-none transition ease-in-out duration-120">
+                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-customWhite bg-customBlue hover:text-customBlue hover:bg-customWhite hover:border-customBlue focus:outline-none transition ease-in-out duration-120">
                             <div>{{ Auth::user()->name }}</div>
                             
                             <div class="ms-1">
@@ -121,7 +121,7 @@
             @auth
                 @if(Auth::user()->role === 'lawyer')
                     <x-responsive-nav-link :href="route('lawyer.edit')" :active="request()->routeIs('lawyer.edit')">
-                        {{ __('Profil Pengacara') }}
+                        {{ __('Data') }}
                     </x-responsive-nav-link>
                 @endif
             @endauth
