@@ -58,17 +58,17 @@
 
             <div class="flex items-center gap-4 mt-2">
                 <label class="inline-flex items-center text-customWhite">
-                    <input type="radio" name="gender" value="male" {{ old('gender') == 'male' ? 'checked' : '' }} class="form-radio text-customYellow">
+                    <input type="radio" name="gender" value="male" {{ (old('gender') ?? $user->gender) == 'male' ? 'checked' : '' }} class="form-radio text-customYellow">
                     <span class="ml-2">Laki-laki</span>
                 </label>
 
                 <label class="inline-flex items-center text-customWhite">
-                    <input type="radio" name="gender" value="female" {{ old('gender') == 'female' ? 'checked' : '' }} class="form-radio text-customYellow">
+                    <input type="radio" name="gender" value="female" {{ (old('gender') ?? $user->gender) == 'female' ? 'checked' : '' }} class="form-radio text-customYellow">
                     <span class="ml-2">Perempuan</span>
                 </label>
 
                 <label class="inline-flex items-center text-customWhite">
-                    <input type="radio" name="gender" value="others" {{ old('gender') == 'others' ? 'checked' : '' }} class="form-radio text-customYellow">
+                    <input type="radio" name="gender" value="others" {{ (old('gender') ?? $user->gender) == 'others' ? 'checked' : '' }} class="form-radio text-customYellow">
                     <span class="ml-2">Lainnya</span>
                 </label>
             </div>
@@ -80,8 +80,8 @@
             <x-input-label for="role" :value="__('Role')" />
             <select id="role" name="role" required class="text-customFont mt-1 block w-full border-gray-300 group-hover:block:bg-customYellow rounded-md shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition duration-120 ease-in-out">
                 <option class="hover:bg-customYellow" value="">-- Pilih Peran --</option>
-                <option value="client" {{ old('role') == 'client' ? 'selected' : '' }}>Klien</option>
-                <option value="lawyer" {{ old('role') == 'lawyer' ? 'selected' : '' }}>Pengacara</option>
+                <option value="client" {{ (old('role') ?? $user->role) == 'client' ? 'selected' : '' }}>Klien</option>
+                <option value="lawyer" {{ (old('role') ?? $user->role) == 'lawyer' ? 'selected' : '' }}>Pengacara</option>
             </select>
             <x-input-error :messages="$errors->get('role')" class="mt-2" />
         </div>
