@@ -1,15 +1,10 @@
-# Verdicto — Lawyer Directory & Article Web Platform
+# Verdicto
 
 **Verdicto** is a Laravel Blade-based web application that connects users with professional lawyers. It supports user registration with roles (*client* or *lawyer*), profile editing, article listings, lawyer search functionality, and informational pages like testimonials, About Us, and FAQ.
 
 ---
 
 ## 🚀 Features
-
-- 🔐 **Role-Based Authentication**
-  - Users can register as either a **client** or **lawyer**.
-  - Authentication is built using Laravel Breeze.
-
 - 🔐 **Role-Based Authentication**
   - Users can register as either a **client** or **lawyer**.
   - Lawyers get access to a **dedicated dashboard/page** (under `/lawyeraccess`) restricted to their role.
@@ -47,6 +42,19 @@ Role-based middleware ensures that:
 
 ---
 
+## 📦 Branch Information
+
+- **Active branch**: `dev`
+- All development and feature updates are pushed to the `dev` branch.
+- Before starting work, always pull the latest from `dev`:
+  
+```bash
+git checkout dev
+git pull origin dev
+```
+
+---
+
 ## 🛠️ Installation Guide
 
 1. **Clone the project**
@@ -54,6 +62,7 @@ Role-based middleware ensures that:
 ```bash
 git clone https://github.com/ceciliasx/verdicto.git
 cd verdicto
+git checkout dev
 ```
 
 2. **Install dependencies**
