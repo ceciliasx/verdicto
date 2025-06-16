@@ -62,7 +62,7 @@
                 <!-- FAQ Item 5 -->
                 <div x-data="{ open: false }" class="border border-gray-200 rounded-md p-6  ">
                     <button @click="open = !open" class="w-full flex justify-between items-center px-4 py-4 text-left text-lg font-medium text-customFont focus:outline-none">
-                        <span>Bagaimana cara memberikan masukan atau bertanya tentang aksesibilitas?</span>
+                        <span>Bagaimana cara memberikan masukan atau bertanya?</span>
                         <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
