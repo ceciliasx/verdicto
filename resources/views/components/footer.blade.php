@@ -9,7 +9,10 @@
     </div>
 
     <div class="footer-middle">
-      <h3><u><a href="{{ url('/aboutus#about-verdicto') }}"><strong>TENTANG KAMI</strong></a></u></h3>
+      <ul class="mb-4">
+        <a class="faq" href="{{ url('/faq#faq') }}">Baca FAQ</a>
+      </ul>
+      <h3 class="aboutus"><u><a href="{{ url('/aboutus#about-verdicto') }}"><strong>TENTANG KAMI</strong></a></u></h3>
       <ul>
         <li><a href="{{ url('/aboutus#about-us') }}">Tim Kami</a></li>
         <li><a href="{{ url('/aboutus#accessibility') }}">Aksesibilitas</a></li>

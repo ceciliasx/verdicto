@@ -37,6 +37,9 @@ Route::get('/lawyers', [LawyerController::class, 'index'])->name('lawyers.index'
 Route::get('/aboutus', function () {
     return view('aboutus.aboutus');
 });
+Route::get('/faq', function () {
+    return view('aboutus.faq');
+});
 
 Route::patch('/profile/picture', [ProfilePictureController::class, 'update'])->name('profile.picture.update');
 Route::delete('/profile/picture', [ProfilePictureController::class, 'destroyProfilePicture'])->name('profile.picture.delete');

@@ -29,8 +29,8 @@
     </div>
 
     <div class="text-center mb-8">
-        <a href="{{ route('testimonials.create') }}" class="inline-block mt-4 px-6 py-2 text-customWhite underline font-semibold rounded-lg shadow hover:text-customYellow transition">
-            Tulis Testimoni
+        <a href="{{ route('testimonials.create') }}" class="inline-block mt-4 px-6 py-2 text-customWhite text-lg underline font-semibold rounded-lg hover:text-customYellow transition">
+            Tulis testimoni Anda
         </a>
     </div>
 </section>
