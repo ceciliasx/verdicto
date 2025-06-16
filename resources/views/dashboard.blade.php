@@ -3,6 +3,15 @@
         @vite('resources/css/lawyer_style.css')
     @endsection
 
+    @if (session('status'))
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
+            {{ session('status') }}
+        </div>
+    @endif
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <x-search-box id="search" placeholder="Cari di sini..." />
 
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -104,6 +113,9 @@
             </div>
         </section>
 
+        {{-- 3. Testimonials Section --}}
+        @include('components.testimonials', ['testimonials' => $testimonials])
+
     </div>
     
     <div class="modal" id="lawyerModal" style="display: none;">
@@ -116,5 +128,7 @@
     @section('scripts')
         @vite('resources/js/lawyer_script.js')
     @endsection
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
 </x-app-layout>

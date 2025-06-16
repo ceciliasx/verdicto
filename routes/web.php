@@ -7,6 +7,8 @@ use App\Http\Controllers\ProfilePictureController;
 use App\Http\Middleware\CheckLawyer;   
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LawyerAccessController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TestimonialController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,5 +40,11 @@ Route::get('/aboutus', function () {
 
 Route::patch('/profile/picture', [ProfilePictureController::class, 'update'])->name('profile.picture.update');
 Route::delete('/profile/picture', [ProfilePictureController::class, 'destroyProfilePicture'])->name('profile.picture.delete');
+
+Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])->name('dashboard');
+
+Route::get('/testimonials/create', [TestimonialController::class, 'create'])->name('testimonials.create');
+Route::post('/testimonials', [TestimonialController::class, 'store'])->name('testimonials.store');
+
 
 require __DIR__.'/auth.php';
