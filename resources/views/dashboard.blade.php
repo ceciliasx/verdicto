@@ -3,12 +3,6 @@
         @vite('resources/css/lawyer_style.css')
     @endsection
 
-    @if (session('status'))
-        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
-            {{ session('status') }}
-        </div>
-    @endif
-
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -115,6 +109,11 @@
 
         {{-- 3. Testimonials Section --}}
         @include('components.testimonials', ['testimonials' => $testimonials])
+        @if (session('status'))
+            <div class="text-green-500 text-center mb-4">
+                {{ session('status') }}
+            </div>
+        @endif
 
     </div>
     

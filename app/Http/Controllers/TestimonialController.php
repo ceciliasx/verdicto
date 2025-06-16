@@ -23,7 +23,6 @@ class TestimonialController extends Controller
             'user_id' => Auth::id(),
             'content' => $request->content,
         ]);
-
-        return redirect('dashboard/')->with('status', 'Testimoni berhasil dikirim!');
+        return redirect('dashboard#testimonial-section')->with('status', 'Testimoni berhasil dikirim!');
     }
 }

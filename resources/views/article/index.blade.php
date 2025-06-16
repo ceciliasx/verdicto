@@ -10,7 +10,7 @@
 
     <x-search-box id="search" class="search-input" placeholder="Cari artikel di sini..."/>
     <div class="article-web">
-        <h2 class="rec-text", id="rec-title">Rekomendasi Artikel untuk Anda</h2>
+        <h2 class="rec-text", id="rec-title">Temukan Artikel</h2>
         <div class="article-rec">
             <div class="flex-box", data-id='1'>
                 <div class="image-half">
