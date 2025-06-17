@@ -1,6 +1,6 @@
 # Verdicto
 
-**Verdicto** is a Laravel Blade-based web application that connects users with professional lawyers. It supports user registration with roles (*client* or *lawyer*), profile editing, article listings, lawyer search functionality, and informational pages like testimonials, About Us, and FAQ.
+**Verdicto** is a Laravel Blade-based web application that connects users with professional lawyers. It supports user registration with roles (*client* or *lawyer*), chatbot, profile editing, article listings, lawyer search functionality, and informational pages like testimonials, About Us, and FAQ.
 
 ---
 
@@ -21,6 +21,11 @@
 - 📝 **Testimonials**
   - Clients can submit and view testimonials.
   - Displayed on a dedicated `testimonials/` page.
+
+- 🤖 **AI Chatbot (Gemini + Livewire)**
+  - Users can interact with an AI chatbot powered by Gemini AI API.
+  - Accessible via a floating bubble that links to `/chatbot`.
+  - Built using Laravel Livewire for dynamic, real-time interaction.
 
 - 👤 **Profile Management**
   - Users can edit their profile in `profile/`.
@@ -77,7 +82,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-4. **Configure database in .env**
+4. **Configure .env file**
 ```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -85,7 +90,10 @@ DB_PORT=3306
 DB_DATABASE=verdictodb
 DB_USERNAME=root
 DB_PASSWORD=
+
+GEMINI_API_KEY=your_google_api_key_here
 ```
+🚨 The GEMINI_API_KEY is required for the chatbot to function. Get it from Google AI Studio: https://aistudio.google.com/app/apikey
 
 5. **Run database migrations**
 ```bash
@@ -115,6 +123,7 @@ resources/views/
 ├── lawyer/                # Lawyer listing and detail views
 ├── lawyeraccess/          # Views only accessible by users with 'lawyer' role
 ├── layouts/               # App layout structure
+├── livewire/              # Livewire components including chatbot
 ├── profile/               # Profile editing (incl. photo)
 ├── testimonials/          # Testimonial submission and display
 ├── dashboard.blade.php    # Authenticated user dashboard
@@ -132,8 +141,9 @@ resources/views/
 ---
 
 ## 🧠 Tech Stack
-- Laravel 10
-- Blade Templating Engine
-- Tailwind CSS
-- MySQL
-- Vite for asset bundling
+- **Backend**: Laravel 12
+- **Frontend**: Blade, Tailwind CSS
+- **Realtime UI**: Laravel Livewire
+- **AI Integration**: Gemini API
+- **Database**: MySQL
+- **Assets**: Vite
