@@ -49,5 +49,8 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
 Route::get('/testimonials/create', [TestimonialController::class, 'create'])->name('testimonials.create');
 Route::post('/testimonials', [TestimonialController::class, 'store'])->name('testimonials.store');
 
+Route::get('/chatbot', function () {
+    return view('chatbot.index');
+})->name('chatbot.index');;
 
 require __DIR__.'/auth.php';
