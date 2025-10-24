@@ -143,7 +143,7 @@ resources/views/
 ## 🧠 Tech Stack
 - **Backend**: Laravel 12
 - **Frontend**: Blade, Tailwind CSS
-- **Realtime UI**: Laravel Livewire
+- **Realtime UI**: Laravel Livewire (with Alpine.js)
 - **AI Integration**: Gemini API
 - **Database**: MySQL
 - **Assets**: Vite
